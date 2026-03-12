@@ -4,20 +4,5 @@
   "installCommand": "npm install",
   "framework": "vite",
   "outputDirectory": "dist",
-  "public": "dist",
-  "nodeVersion": "18.x",
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
-    },
-    {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ]
+  "nodeVersion": "18.x"
 }

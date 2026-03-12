@@ -12,13 +12,19 @@ export default defineConfig(({mode}) => {
         '@': path.resolve(__dirname, '.'),
       },
     },
+    root: '.',
     server: {
       hmr: true,
+      port: 5173,
     },
     build: {
       outDir: 'dist',
+      emptyOutDir: true,
       sourcemap: false,
       minify: 'terser',
+      rollupOptions: {
+        input: path.resolve(__dirname, 'index.html'),
+      },
     },
   };
 });
