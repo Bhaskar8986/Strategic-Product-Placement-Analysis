@@ -28,10 +28,6 @@ A sleek, modern dashboard for visualizing and analyzing product placement data. 
 ### Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/your-username/tableau-analytics-dashboard.git
-cd tableau-analytics-dashboard
-
 # Install dependencies
 npm install
 

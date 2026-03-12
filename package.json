@@ -8,6 +8,7 @@
     "flask": "python3 app.py",
     "build": "vite build",
     "preview": "vite preview",
+    "start": "node --loader tsx ./server.ts",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit"
   },
