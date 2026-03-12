@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "tsx server.ts",
     "flask": "python3 app.py",
-    "build": "vite build",
+    "build": "vite build && npm run copy-static",
+    "copy-static": "node -e \"const fs=require('fs'); const path=require('path'); const src=path.join(__dirname,'static'); const dest=path.join(__dirname,'dist','static'); if(fs.existsSync(src))fs.cpSync(src,dest,{recursive:true});\"",
     "preview": "vite preview",
     "start": "node --loader tsx ./server.ts",
     "clean": "rm -rf dist",
@@ -30,6 +31,7 @@
     "tsx": "^4.21.0",
     "typescript": "~5.8.2",
     "vite": "^6.2.0",
-    "@types/express": "^4.17.21"
+    "@types/express": "^4.17.21",
+    "@vercel/node": "^3.2.2"
   }
 }
